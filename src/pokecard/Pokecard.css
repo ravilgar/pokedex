@@ -1,0 +1,22 @@
+.Pokecard {
+	margin: 20px;
+	border: 1px solid #ccc;
+	float: left;
+    width: 15%;
+    height: 330px;
+    background-color: darkseagreen;
+}
+
+.Pokecard:hover {
+	border: 1px solid #777;
+}
+
+.Pokecard:hover img{
+	width: 60%;
+}
+
+.Pokecard-img {
+	width: auto;
+	height: 50%;
+}
+

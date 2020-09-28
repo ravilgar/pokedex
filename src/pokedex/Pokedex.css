@@ -1,0 +1,15 @@
+.Pokedex {
+	display: flex;
+}
+
+.Pokedex-title {
+	padding-left: 200px;
+}
+
+.Pokedex-winner {
+	color: green;
+}
+
+.Pokedex-loser {
+	color: red;
+}
