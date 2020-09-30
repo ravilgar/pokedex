@@ -39,11 +39,9 @@ class Pokegame extends Component {
 		super(props);
 
 		this.state = {
-			hand1: createCards().hand1,
-			hand2: createCards().hand2,
-			exp1: createCards().exp1,
-			exp2: createCards().exp2,
+			cards: createCards(),
 		};
+
 		// привязывает this для всех экземпляров класса
 		this.giveCards = this.giveCards.bind(this);
 	}
@@ -51,10 +49,8 @@ class Pokegame extends Component {
 	giveCards() {
 		// обновляем state
 		this.setState({
-			hand1: createCards().hand1,
-			hand2: createCards().hand2,
-			exp1: createCards().exp1,
-			exp2: createCards().exp2,
+			cards: createCards(),
+
 		});
 	}
 
@@ -65,14 +61,14 @@ class Pokegame extends Component {
 					Try again!
 				</button>
 				<Pokedex
-					pokemons={this.state.hand1}
-					experience={this.state.exp1}
-					isWinner={this.state.exp1 > this.state.exp2}
+					pokemons={this.state.cards.hand1}
+					experience={this.state.cards.exp1}
+					isWinner={this.state.cards.exp1 > this.state.cards.exp2}
 				/>
 				<Pokedex
-					pokemons={this.state.hand2}
-					experience={this.state.exp2}
-					isWinner={this.state.exp2 > this.state.exp1}
+					pokemons={this.state.cards.hand2}
+					experience={this.state.cards.exp2}
+					isWinner={this.state.cards.exp2 > this.state.cards.exp1}
 				/>
 			</div>
 		);
